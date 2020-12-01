@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="styling.css">
+
+    <script>
+        function getnumber(val){
+            var result = document.getElementById("result");
+            // console.log(result.value)
+            result.value += val;
+        }
+        function resultunt(){
+            var result1 = document.getElementById('result');
+            result1 = eval(result1.value)
+            result.value = result1;
+            // console.log(result1)
+        }
+        function clearNow(){
+            var tocancel = document.getElementById("result").value = "";
+            // result.value = "";
+        }
+       
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Calculator Javascript CSS HTML</h1>
+    </div>
+    <div class="main">
+        
+        <div class="input1">
+            <input type="text" class="check" id="result">
+        </div>
+        <div class="numbers">
+            <div class="row"> 
+                <button class="btn" onclick="getnumber(7)" id="bbb">7</button>
+                <button class="btn" onclick="getnumber(8)">8</button>
+                <button class="btn" onclick="getnumber(9)">9</button>
+            </div>
+            <div class="row">
+                <button class="btn" onclick="getnumber(4)">4</button>
+                <button class="btn" onclick="getnumber(5)">5</button>
+                <button class="btn" onclick="getnumber(6)">6</button>
+            </div>
+            <div class="row">
+                <button class="btn" onclick="getnumber(1)">1</button>
+                <button class="btn" onclick="getnumber(2)">2</button>
+                <button class="btn" onclick="getnumber(3)">3</button>
+            </div>
+            <div class="row">
+                <button class="btn" onclick="getnumber(0)">0</button>
+                <button class="btn" onclick="getnumber('.')">.</button>
+                <button class="btn" onclick="resultunt()">=</button>
+            </div>
+        </div>
+        <div class="operator">
+            <div class="center">
+                <div class="opt">
+                    <button class="btn-1" onclick="clearNow()">C</button>
+                </div>
+                <div class="opt">
+                    <button class="btn-1" onclick="getnumber('/')">/</button>
+
+                </div>
+                <div class="opt">
+                    <button class="btn-1" onclick="getnumber('*')">x</button>
+
+                </div>
+                <div class="opt">
+                    <button class="btn-1" onclick="getnumber('-')">-</button>
+
+                </div>
+                <div class="opt">
+                    <button class="btn-1" onclick="getnumber('+')">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
